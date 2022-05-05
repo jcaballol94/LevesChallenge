@@ -472,5 +472,96 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Name
+      value: SDF Box_center
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Name
+      value: SDF Box_angles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Name
+      value: SDF Box_size
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[1].m_Name
+      value: Environment SDF
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.y
+      value: 4.71095
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.x
+      value: 24.23282
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.y
+      value: 17.0387
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.z
+      value: 24.23282
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[1].m_Value
+      value: 
+      objectReference: {fileID: 11700000, guid: 6abc895c10f6c894e926425556529fd7,
+        type: 2}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641042099773102, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15c7cf40212ea8b469762c2e87b7eeec, type: 3}
