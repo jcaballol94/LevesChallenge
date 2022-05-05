@@ -53,26 +53,29 @@ VisualEffect:
       - m_Value: 0.007
         m_Name: GravityRatio
         m_Overridden: 1
+      - m_Value: 0.01
+        m_Name: LeafRadius
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 1, z: 0}
+      - m_Value: {x: 0, y: 0.5, z: 0}
         m_Name: SDF Box_center
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0}
         m_Name: SDF Box_angles
         m_Overridden: 1
-      - m_Value: {x: 25, y: 10, z: 25}
+      - m_Value: {x: 10, y: 5, z: 10}
         m_Name: SDF Box_size
         m_Overridden: 1
-      - m_Value: {x: -0.05, y: 0, z: 0}
+      - m_Value: {x: -0.08, y: 0, z: 0}
         m_Name: Wind
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0}
         m_Name: InteractionSpeed
         m_Overridden: 1
-      - m_Value: {x: 3, y: 3, z: 3}
+      - m_Value: {x: 1.5, y: 1.5, z: 1.5}
         m_Name: ParticleScale
         m_Overridden: 1
     m_Vector4f:
