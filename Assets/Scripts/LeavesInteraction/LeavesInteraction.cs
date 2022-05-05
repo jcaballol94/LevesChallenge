@@ -7,11 +7,15 @@ namespace jCaballol94.Leaves
 {
     public class LeavesInteraction : MonoBehaviour
     {
-        private readonly int SPHERE = Shader.PropertyToID("InteractionSphere");
-        private readonly int VELOCITY = Shader.PropertyToID("InteractionSpeed");
+        private readonly int SPHERE_RIGHT = Shader.PropertyToID("SphereRight");
+        private readonly int VELOCITY_RIGHT = Shader.PropertyToID("ForceRight");
+        private readonly int SPHERE_LEFT = Shader.PropertyToID("SphereLeft");
+        private readonly int VELOCITY_LEFT = Shader.PropertyToID("ForceLeft");
 
         public VisualEffect effect;
         [Min(0f)] public float forceScale = 1f;
+        [Min(0f)] public float forceLimit = 10f;
+        public bool right;
 
         public float Radius => Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
 
@@ -26,9 +30,10 @@ namespace jCaballol94.Leaves
         {
             var dist = transform.position - m_previousPos;
             var velocity = dist / Time.deltaTime;
+            velocity = Vector3.ClampMagnitude(velocity, forceLimit);
 
-            effect.SetVector4(SPHERE, new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius));
-            effect.SetVector3(VELOCITY, velocity * forceScale);
+            effect.SetVector4(right ? SPHERE_RIGHT : SPHERE_LEFT, new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius));
+            effect.SetVector3(right ? VELOCITY_RIGHT : VELOCITY_LEFT, velocity * forceScale);
 
             m_previousPos = transform.position;
         }
