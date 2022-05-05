@@ -1548,7 +1548,10 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 0.007
+        m_Name: GravityRatio
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
