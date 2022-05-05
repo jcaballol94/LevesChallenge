@@ -3049,7 +3049,7 @@ MonoBehaviour:
   useEmissiveMap: 0
   colorMode: 1
   useEmissive: 0
-  doubleSided: 0
+  doubleSided: 1
   MeshCount: 1
   lod: 0
 --- !u!114 &8926484042661614793
@@ -6047,7 +6047,7 @@ MonoBehaviour:
   useEmissiveMap: 0
   colorMode: 1
   useEmissive: 0
-  doubleSided: 0
+  doubleSided: 1
   MeshCount: 1
   lod: 0
 --- !u!114 &8926484042661615022
