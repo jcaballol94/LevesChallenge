@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SDF Settings
   m_EditorClassIdentifier: 
   m_MaxResolution: 128
-  m_BoxCenter: {x: 0.51364994, y: 3.141715, z: -0.0000009536743}
-  m_BoxSizeReference: {x: 11.199601, y: 9.53716, z: 10.237136}
+  m_BoxCenter: {x: 0, y: 0.5, z: 0}
+  m_BoxSizeReference: {x: 10, y: 5, z: 10}
   m_FitPaddingVoxel: {x: 1, y: 1, z: 1}
   m_SignPassesCount: 1
   m_InOutThreshold: 0.5
