@@ -11,6 +11,7 @@ namespace jCaballol94.Leaves
         private readonly int VELOCITY = Shader.PropertyToID("InteractionSpeed");
 
         public VisualEffect effect;
+        [Min(0f)] public float forceScale = 1f;
 
         public float Radius => Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
 
@@ -27,7 +28,7 @@ namespace jCaballol94.Leaves
             var velocity = dist / Time.deltaTime;
 
             effect.SetVector4(SPHERE, new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius));
-            effect.SetVector3(VELOCITY, velocity);
+            effect.SetVector3(VELOCITY, velocity * forceScale);
 
             m_previousPos = transform.position;
         }

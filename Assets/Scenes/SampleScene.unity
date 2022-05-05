@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 923629189}
+  forceScale: 5
 --- !u!4 &1201491729
 Transform:
   m_ObjectHideFlags: 0
