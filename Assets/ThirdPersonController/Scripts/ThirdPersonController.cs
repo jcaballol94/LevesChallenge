@@ -98,6 +98,13 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
 
+        private bool m_enableMovement = false;
+
+        public void UnblockMovement(string s)
+        {
+            m_enableMovement = true;
+        }
+
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
         private PlayerInput _playerInput;
 #endif
@@ -154,6 +161,8 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (!m_enableMovement) return;
+
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
