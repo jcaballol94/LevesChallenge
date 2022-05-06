@@ -7,35 +7,47 @@ namespace jCaballol94.Leaves
 {
     public class LeavesInteraction : MonoBehaviour
     {
-        private readonly int SPHERE_RIGHT = Shader.PropertyToID("SphereRight");
-        private readonly int VELOCITY_RIGHT = Shader.PropertyToID("ForceRight");
-        private readonly int SPHERE_LEFT = Shader.PropertyToID("SphereLeft");
-        private readonly int VELOCITY_LEFT = Shader.PropertyToID("ForceLeft");
+        public CharacterInteractionData interaction;
+        public bool isRightFoot;
 
-        public VisualEffect effect;
-        [Min(0f)] public float forceScale = 1f;
-        [Min(0f)] public float forceLimit = 10f;
-        public bool right;
+        public struct Data
+        {
+            public Vector4 shpere;
+            public Vector3 force;
+        }
 
         public float Radius => Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
 
         private Vector3 m_previousPos;
 
+        private void Awake()
+        {
+            if (interaction)
+            {
+                if (isRightFoot)
+                    interaction.rightFoot = this;
+                else
+                    interaction.leftFoot = this;
+            }    
+        }
         private void Start()
         {
             m_previousPos = transform.position;
         }
 
-        private void LateUpdate()
+        public Data GetData()
         {
             var dist = transform.position - m_previousPos;
             var velocity = dist / Time.deltaTime;
-            velocity = Vector3.ClampMagnitude(velocity, forceLimit);
-
-            effect.SetVector4(right ? SPHERE_RIGHT : SPHERE_LEFT, new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius));
-            effect.SetVector3(right ? VELOCITY_RIGHT : VELOCITY_LEFT, velocity * forceScale);
-
             m_previousPos = transform.position;
+
+            var data = new Data()
+            {
+                shpere = new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius),
+                force = Vector3.ClampMagnitude(velocity * interaction.forceScale, interaction.forceLimit)
+            };
+
+            return data;
         }
 
         private void OnDrawGizmosSelected()

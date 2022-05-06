@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3067641042099773100}
   - component: {fileID: 3067641042099773102}
   - component: {fileID: 3067641042099773101}
+  - component: {fileID: 5164087898742623235}
   m_Layer: 0
   m_Name: LeavesFX
   m_TagString: Untagged
@@ -150,6 +151,19 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5164087898742623235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3067641042099773091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34c5c570a1c151479a7536efc2b5e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction: {fileID: 11400000, guid: d0bc8f3657c73fe4c8fbb850c95ab892, type: 2}
 --- !u!1001 &6602566571391756987
 PrefabInstance:
   m_ObjectHideFlags: 0
