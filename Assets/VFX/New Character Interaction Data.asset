@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: New Character Interaction Data
   m_EditorClassIdentifier: 
   forceScale: 10
-  forceLimit: 30
+  forceLimit: 100
   rightFoot: {fileID: 0}
   leftFoot: {fileID: 0}
