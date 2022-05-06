@@ -127,6 +127,7 @@ Material:
     - _UVSec: 0
     - _WindDensity: 0.2
     - _WindDensity1: 0.2
+    - _WindMaskRadius: 2.62
     - _WindMovement: 0.5
     - _WindMovement1: 0.5
     - _WindStrength: 0.3
@@ -143,6 +144,7 @@ Material:
     - _GroundColor: {r: 0.08490568, g: 0.05234205, b: 0.04846032, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TopColor: {r: 0.4811321, g: 0.4036026, b: 0.2382966, a: 1}
+    - _WindMaskCenter: {r: -0.204, g: 0.59, b: -0.167, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5165102454686715439
 MonoBehaviour:

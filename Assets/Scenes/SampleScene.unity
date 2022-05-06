@@ -705,7 +705,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1c080e5de4d5340b963c2f0c5fea1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 1
+  strength: 5
+  mainPeriod: 10
+  mainAmplitude: 0.05
+  secondaryPeriod: 1
+  secondaryAmplitude: 0.5
 --- !u!4 &1501312841
 Transform:
   m_ObjectHideFlags: 0
@@ -841,7 +845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613321726
 Transform:
   m_ObjectHideFlags: 0
@@ -972,12 +976,12 @@ PrefabInstance:
     - target: {fileID: 623268965487882504, guid: 15c7cf40212ea8b469762c2e87b7eeec,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[3].m_Value.x
-      value: -1.0000001
+      value: -1.2500001
       objectReference: {fileID: 0}
     - target: {fileID: 623268965487882504, guid: 15c7cf40212ea8b469762c2e87b7eeec,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[3].m_Value.z
-      value: -0.00000011920929
+      value: -0.00000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 623268965487882504, guid: 15c7cf40212ea8b469762c2e87b7eeec,
         type: 3}

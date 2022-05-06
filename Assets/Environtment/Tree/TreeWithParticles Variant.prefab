@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interaction: {fileID: 11400000, guid: d0bc8f3657c73fe4c8fbb850c95ab892, type: 2}
+  windScale: 0.25
 --- !u!1001 &6602566571391756987
 PrefabInstance:
   m_ObjectHideFlags: 0

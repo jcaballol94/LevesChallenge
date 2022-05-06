@@ -16,6 +16,7 @@ namespace jCaballol94.Leaves
         private readonly int WIND = Shader.PropertyToID("Wind");
 
         public CharacterInteractionData interaction;
+        public float windScale = 1;
 
         private VisualEffect m_effect;
 
@@ -40,7 +41,7 @@ namespace jCaballol94.Leaves
                 m_effect.SetVector3(FORCE_LEFT, leftFoot.force);
             }
 
-            m_effect.SetVector3(WIND, Shader.GetGlobalVector(Wind.GLOBAL_WIND));
+            m_effect.SetVector3(WIND, Shader.GetGlobalVector(Wind.GLOBAL_WIND) * windScale);
         }
     }
 }
