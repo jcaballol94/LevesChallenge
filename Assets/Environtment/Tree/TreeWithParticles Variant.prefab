@@ -60,13 +60,13 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 0.5, z: 0}
+      - m_Value: {x: 0, y: 2.5, z: 0}
         m_Name: SDF Box_center
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0}
         m_Name: SDF Box_angles
         m_Overridden: 1
-      - m_Value: {x: 10, y: 5, z: 10}
+      - m_Value: {x: 15, y: 10, z: 15}
         m_Name: SDF Box_size
         m_Overridden: 1
       - m_Value: {x: -1, y: 0, z: 0}

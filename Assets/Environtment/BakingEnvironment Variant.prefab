@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5236128046530440067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 405954072678358758, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5362752393953957539, guid: 3ebf65d3a6489594ca09a35d85d43b0a,
+        type: 3}
+    - target: {fileID: 623268965487882501, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 623268965487882507, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863528, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067641041413863535, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_Name
+      value: BakingEnvironment
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441952722562103476, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5362752393953957539, guid: 3ebf65d3a6489594ca09a35d85d43b0a,
+        type: 3}
+    - target: {fileID: 5109788213970574680, guid: 15c7cf40212ea8b469762c2e87b7eeec,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15c7cf40212ea8b469762c2e87b7eeec, type: 3}
