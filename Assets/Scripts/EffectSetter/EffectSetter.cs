@@ -5,6 +5,7 @@ using UnityEngine.VFX;
 
 namespace jCaballol94.Leaves
 {
+    [ExecuteAlways]
     [RequireComponent(typeof(VisualEffect))]
     public class EffectSetter : MonoBehaviour
     {
@@ -12,6 +13,7 @@ namespace jCaballol94.Leaves
         private readonly int FORCE_RIGHT = Shader.PropertyToID("ForceRight");
         private readonly int SPHERE_LEFT = Shader.PropertyToID("SphereLeft");
         private readonly int FORCE_LEFT = Shader.PropertyToID("ForceLeft");
+        private readonly int WIND = Shader.PropertyToID("Wind");
 
         public CharacterInteractionData interaction;
 
@@ -24,13 +26,21 @@ namespace jCaballol94.Leaves
 
         private void LateUpdate()
         {
-            var rightFoot = interaction.rightFoot.GetData();
-            m_effect.SetVector4(SPHERE_RIGHT, rightFoot.shpere);
-            m_effect.SetVector3(FORCE_RIGHT, rightFoot.force);
+            if (interaction.rightFoot)
+            {
+                var rightFoot = interaction.rightFoot.GetData();
+                m_effect.SetVector4(SPHERE_RIGHT, rightFoot.shpere);
+                m_effect.SetVector3(FORCE_RIGHT, rightFoot.force);
+            }
 
-            var leftFoot = interaction.leftFoot.GetData();
-            m_effect.SetVector4(SPHERE_LEFT, leftFoot.shpere);
-            m_effect.SetVector3(FORCE_LEFT, leftFoot.force);
+            if (interaction.leftFoot)
+            {
+                var leftFoot = interaction.leftFoot.GetData();
+                m_effect.SetVector4(SPHERE_LEFT, leftFoot.shpere);
+                m_effect.SetVector3(FORCE_LEFT, leftFoot.force);
+            }
+
+            m_effect.SetVector3(WIND, Shader.GetGlobalVector(Wind.GLOBAL_WIND));
         }
     }
 }

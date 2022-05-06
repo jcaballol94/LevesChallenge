@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d4a9d8c36257c4cb21a2c11058b1ca, type: 3}
   m_Name: New Character Interaction Data
   m_EditorClassIdentifier: 
-  forceScale: 5
-  forceLimit: 10
+  forceScale: 7.5
+  forceLimit: 40
   rightFoot: {fileID: 0}
   leftFoot: {fileID: 0}
