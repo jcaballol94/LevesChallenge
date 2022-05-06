@@ -708,8 +708,8 @@ MonoBehaviour:
   strength: 5
   mainPeriod: 10
   mainAmplitude: 0.05
-  secondaryPeriod: 1
-  secondaryAmplitude: 0.5
+  secondaryPeriod: 2
+  secondaryAmplitude: 0.02
 --- !u!4 &1501312841
 Transform:
   m_ObjectHideFlags: 0
