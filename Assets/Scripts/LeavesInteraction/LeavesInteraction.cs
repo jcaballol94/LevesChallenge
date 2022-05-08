@@ -10,6 +10,7 @@ namespace jCaballol94.Leaves
         [Header("Parameters")]
         [Min(0f)] public float forceScale = 1f;
         [Min(0f)] public float forceLimit = 10f;
+        [Min(0f)] public float extraUpForce = 0f;
 
         public Vector3 Force { get; private set; }
         public Vector4 Sphere { get; private set; }
@@ -34,6 +35,7 @@ namespace jCaballol94.Leaves
             var dist = transform.position - m_previousPos;
             var velocity = dist / Time.deltaTime;
             m_previousPos = transform.position;
+            velocity.y += velocity.magnitude * extraUpForce;
 
             Sphere = new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius);
             Force = Vector3.ClampMagnitude(velocity * forceScale, forceLimit);
