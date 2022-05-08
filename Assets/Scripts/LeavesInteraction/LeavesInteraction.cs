@@ -7,47 +7,36 @@ namespace jCaballol94.Leaves
 {
     public class LeavesInteraction : MonoBehaviour
     {
-        public CharacterInteractionData interaction;
-        public bool isRightFoot;
+        [Header("Parameters")]
+        [Min(0f)] public float forceScale = 1f;
+        [Min(0f)] public float forceLimit = 10f;
 
-        public struct Data
-        {
-            public Vector4 shpere;
-            public Vector3 force;
-        }
+        public Vector3 Force { get; private set; }
+        public Vector4 Sphere { get; private set; }
 
         public float Radius => Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
 
         private Vector3 m_previousPos;
 
-        private void Awake()
-        {
-            if (interaction)
-            {
-                if (isRightFoot)
-                    interaction.rightFoot = this;
-                else
-                    interaction.leftFoot = this;
-            }    
-        }
-        private void Start()
+        private void OnEnable()
         {
             m_previousPos = transform.position;
+            EffectSetter.Interactions.Add(this);
         }
 
-        public Data GetData()
+        private void OnDisable()
+        {
+            EffectSetter.Interactions.Remove(this);
+        }
+
+        private void LateUpdate()
         {
             var dist = transform.position - m_previousPos;
             var velocity = dist / Time.deltaTime;
             m_previousPos = transform.position;
 
-            var data = new Data()
-            {
-                shpere = new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius),
-                force = Vector3.ClampMagnitude(velocity * interaction.forceScale, interaction.forceLimit)
-            };
-
-            return data;
+            Sphere = new Vector4(transform.position.x, transform.position.y, transform.position.z, Radius);
+            Force = Vector3.ClampMagnitude(velocity * forceScale, forceLimit);
         }
 
         private void OnDrawGizmosSelected()

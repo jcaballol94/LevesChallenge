@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8596005752d70bb4b9e9524b7bb7f8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaction: {fileID: 11400000, guid: d0bc8f3657c73fe4c8fbb850c95ab892, type: 2}
-  isRightFoot: 0
+  forceScale: 10
+  forceLimit: 100

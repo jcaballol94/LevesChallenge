@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -13,33 +14,71 @@ namespace jCaballol94.Leaves
         private readonly int FORCE_RIGHT = Shader.PropertyToID("ForceRight");
         private readonly int SPHERE_LEFT = Shader.PropertyToID("SphereLeft");
         private readonly int FORCE_LEFT = Shader.PropertyToID("ForceLeft");
+
+        private readonly int INTERACTIONS_BUFFER = Shader.PropertyToID("Interactions");
+        private readonly int INTERACTIONS_COUNT = Shader.PropertyToID("NumInteractions");
+
         private readonly int WIND = Shader.PropertyToID("Wind");
 
-        public CharacterInteractionData interaction;
+        public static List<LeavesInteraction> Interactions { get; private set; } = new List<LeavesInteraction>();
+
         public float windScale = 1;
 
         private VisualEffect m_effect;
+        private GraphicsBuffer m_interactionsBuffer;
+        private NativeArray<Vector4> m_interactionsData;
+        private Bounds m_effectBounds;
 
         private void Awake()
         {
             m_effect = GetComponent<VisualEffect>();
         }
 
-        private void LateUpdate()
+        private void OnEnable()
         {
-            if (interaction.rightFoot)
+            var names = new List<string>();
+            m_effect.GetParticleSystemNames(names);
+            bool first = true;
+            foreach (var name in names)
             {
-                var rightFoot = interaction.rightFoot.GetData();
-                m_effect.SetVector4(SPHERE_RIGHT, rightFoot.shpere);
-                m_effect.SetVector3(FORCE_RIGHT, rightFoot.force);
+                var info = m_effect.GetParticleSystemInfo(name);
+                if (first)
+                    m_effectBounds = info.bounds;
+                else
+                    m_effectBounds.Encapsulate(info.bounds);
+                first = false;
             }
 
-            if (interaction.leftFoot)
+            var numInteractions = m_effect.GetUInt(INTERACTIONS_COUNT);
+            m_interactionsData = new NativeArray<Vector4>((int)numInteractions * 2, Allocator.Persistent);
+            m_interactionsBuffer = new GraphicsBuffer(GraphicsBuffer.Target.Structured, (int)numInteractions * 2, 16);
+            m_interactionsBuffer.SetData(m_interactionsData);
+            m_effect.SetGraphicsBuffer(INTERACTIONS_BUFFER, m_interactionsBuffer);
+        }
+
+        private void OnDisable()
+        {
+            m_interactionsBuffer.Dispose();
+            m_interactionsData.Dispose();
+        }
+
+        private void LateUpdate()
+        {
+            var idx = 0;
+            foreach (var interaction in Interactions)
             {
-                var leftFoot = interaction.leftFoot.GetData();
-                m_effect.SetVector4(SPHERE_LEFT, leftFoot.shpere);
-                m_effect.SetVector3(FORCE_LEFT, leftFoot.force);
+                if (m_effectBounds.Contains(interaction.Sphere))
+                {
+                    m_interactionsData[idx++] = interaction.Force;
+                    m_interactionsData[idx++] = interaction.Sphere;
+                }
             }
+
+            for (; idx < m_interactionsData.Length; idx++)
+            {
+                m_interactionsData[idx] = Vector4.zero;
+            }
+            m_interactionsBuffer.SetData(m_interactionsData);
 
             m_effect.SetVector3(WIND, Shader.GetGlobalVector(Wind.GLOBAL_WIND) * windScale);
         }
